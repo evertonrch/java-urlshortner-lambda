@@ -8,7 +8,5 @@ import lombok.Getter;
 public class UrlData {
 
     private String originalUrl;
-    private String expirationTime;
-    private String shortUrlCode ;
-
+    private Long expirationTime;
 }
