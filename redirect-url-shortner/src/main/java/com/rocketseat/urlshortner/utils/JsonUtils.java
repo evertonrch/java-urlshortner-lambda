@@ -14,10 +14,6 @@ public class JsonUtils {
         mapper = new ObjectMapper();
     }
 
-    public static ObjectMapper getObjectMapper() {
-        return mapper;
-    }
-
     public static UrlData deserializationToUrlData(InputStream inputObject) {
         UrlData urlData = null;
         try {

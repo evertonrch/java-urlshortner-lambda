@@ -2,7 +2,6 @@ package com.rocketseat.urlshortner;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rocketseat.urlshortner.config.S3Config;
 import com.rocketseat.urlshortner.service.AWSService;
 import com.rocketseat.urlshortner.utils.GenericValidatorUtils;
@@ -15,7 +14,6 @@ import java.util.Map;
 
 public class Main implements RequestHandler<Map<String, Object>, Map<String, Object>> {
 
-    private final ObjectMapper mapper = JsonUtils.getObjectMapper();
     private final AWSService awsService = new AWSService(S3Config.getS3Client());
     private final String BUCKET_NAME = "my-url-shortner-bucket";
 
